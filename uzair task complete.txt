@@ -1,0 +1,573 @@
+Console.Write("Enter a number: ");
+            int number = int.Parse(Console.ReadLine());
+
+            if (number > 0)
+            {
+                Console.WriteLine($"{number} is positive.");
+            }
+            else if (number < 0)
+            {
+                Console.WriteLine($"{number} is negative.");
+            }
+            else
+            {
+                Console.WriteLine("The number is zero.");
+            }
+
+
+
+
+
+
+
+
+
+
+
+Console.Write("Enter Roll No: ");
+            string rollNo = Console.ReadLine();
+
+            Console.Write("Enter Name: ");
+            string name = Console.ReadLine();
+
+            Console.Write("Enter marks in Subject 1: ");
+            int subj1Marks = Convert.ToInt32(Console.ReadLine());
+
+            Console.Write("Enter marks in Subject 2: ");
+            int subj2Marks = Convert.ToInt32(Console.ReadLine());
+
+            Console.Write("Enter marks in Subject 3: ");
+            int subj3Marks = Convert.ToInt32(Console.ReadLine());
+
+            int totalMarks = subj1Marks + subj2Marks + subj3Marks;
+            double percentage = (double)totalMarks / 3;
+
+            string grade = "";
+
+            if (percentage >= 80)
+            {
+                grade = "A+";
+            }
+            else if (percentage >= 70 && percentage < 80)
+            {
+                grade = "A";
+            }
+            else if (percentage >= 60 && percentage < 70)
+            {
+                grade = "B";
+            }
+            else if (percentage >= 50 && percentage < 60)
+            {
+                grade = "C";
+            }
+            else if (percentage >= 40 && percentage < 50)
+            {
+                grade = "D";
+            }
+            else
+            {
+                grade = "Fail";
+            }
+
+            Console.WriteLine();
+            Console.WriteLine("Roll No: " + rollNo);
+            Console.WriteLine("Name: " + name);
+            Console.WriteLine("Marks in Subject 1: " + subj1Marks);
+            Console.WriteLine("Marks in Subject 2: " + subj2Marks);
+            Console.WriteLine("Marks in Subject 3: " + subj3Marks);
+            Console.WriteLine("Total Marks: " + totalMarks);
+            Console.WriteLine("Percentage: " + percentage.ToString("F2") + "%");
+            Console.WriteLine("Grade: " + grade);
+
+
+
+
+
+
+
+
+
+
+Console.Write("Enter a number: ");
+            int number = int.Parse(Console.ReadLine());
+
+            if (number > 0)
+            {
+                Console.WriteLine($"{number} is positive.");
+            }
+            else if (number < 0)
+            {
+                Console.WriteLine($"{number} is negative.");
+            }
+            else
+            {
+                Console.WriteLine("The number is zero.");
+            }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+using System;
+
+namespace MonthName
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.Write("Enter the month number (1-12): ");
+            int monthNumber = Convert.ToInt32(Console.ReadLine());
+
+            string monthName = GetMonthName(monthNumber);
+
+            if (monthName != null)
+            {
+                Console.WriteLine("The month name is: " + monthName);
+            }
+            else
+            {
+                Console.WriteLine("Invalid month number.");
+            }
+
+            Console.ReadLine();
+        }
+
+        static string GetMonthName(int monthNumber)
+        {
+            string monthName = null;
+
+            switch (monthNumber)
+            {
+                case 1:
+                    monthName = "January";
+                    break;
+                case 2:
+                    monthName = "February";
+                    break;
+                case 3:
+                    monthName = "March";
+                    break;
+                case 4:
+                    monthName = "April";
+                    break;
+                case 5:
+                    monthName = "May";
+                    break;
+                case 6:
+                    monthName = "June";
+                    break;
+                case 7:
+                    monthName = "July";
+                    break;
+                case 8:
+                    monthName = "August";
+                    break;
+                case 9:
+                    monthName = "September";
+                    break;
+                case 10:
+                    monthName = "October";
+                    break;
+                case 11:
+                    monthName = "November";
+                    break;
+                case 12:
+                    monthName = "December";
+                    break;
+            }
+
+            return monthName;
+        }
+    }
+}
+In this program, we use a switch statement to map the month number entered by the user to the corresponding month name. The GetMonthName() method takes an integer month number as input and returns the month name as a string. The program prompts the user to enter a month number, calls the GetMonthName() method to get the corresponding month name, and then displays it using Console.WriteLine(). If an invalid month number is entered, the program displays an error message.
+
+
+
+
+syed hamza ali
+Write a program in C# Sharp to read any Month Number in integer and
+display the number of days for this month.
+Sure! Here's a simple program in C# that reads a month number as an integer and displays the number of days in that month:
+
+csharp
+Copy code
+using System;
+
+namespace MonthDays
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.Write("Enter the month number (1-12): ");
+            int monthNumber = Convert.ToInt32(Console.ReadLine());
+
+            int numDays = GetMonthDays(monthNumber);
+
+            if (numDays != -1)
+            {
+                Console.WriteLine("The number of days in the month is: " + numDays);
+            }
+            else
+            {
+                Console.WriteLine("Invalid month number.");
+            }
+
+            Console.ReadLine();
+        }
+
+        static int GetMonthDays(int monthNumber)
+        {
+            int numDays = -1;
+
+            switch (monthNumber)
+            {
+                case 1: // January
+                case 3: // March
+                case 5: // May
+                case 7: // July
+                case 8: // August
+                case 10: // October
+                case 12: // December
+                    numDays = 31;
+                    break;
+                case 4: // April
+                case 6: // June
+                case 9: // September
+                case 11: // November
+                    numDays = 30;
+                    break;
+                case 2: // February
+                    numDays = 28;
+                    break;
+            }
+
+            return numDays;
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Console.Write("Enter a number: ");
+            int number = int.Parse(Console.ReadLine());
+
+            if (number > 0)
+            {
+                Console.WriteLine($"{number} is positive.");
+            }
+            else if (number < 0)
+            {
+                Console.WriteLine($"{number} is negative.");
+            }
+            else
+            {
+                Console.WriteLine("The number is zero.");
+            }
+
+
+
+
+
+
+
+
+
+
+
+Console.Write("Enter Roll No: ");
+            string rollNo = Console.ReadLine();
+
+            Console.Write("Enter Name: ");
+            string name = Console.ReadLine();
+
+            Console.Write("Enter marks in Subject 1: ");
+            int subj1Marks = Convert.ToInt32(Console.ReadLine());
+
+            Console.Write("Enter marks in Subject 2: ");
+            int subj2Marks = Convert.ToInt32(Console.ReadLine());
+
+            Console.Write("Enter marks in Subject 3: ");
+            int subj3Marks = Convert.ToInt32(Console.ReadLine());
+
+            int totalMarks = subj1Marks + subj2Marks + subj3Marks;
+            double percentage = (double)totalMarks / 3;
+
+            string grade = "";
+
+            if (percentage >= 80)
+            {
+                grade = "A+";
+            }
+            else if (percentage >= 70 && percentage < 80)
+            {
+                grade = "A";
+            }
+            else if (percentage >= 60 && percentage < 70)
+            {
+                grade = "B";
+            }
+            else if (percentage >= 50 && percentage < 60)
+            {
+                grade = "C";
+            }
+            else if (percentage >= 40 && percentage < 50)
+            {
+                grade = "D";
+            }
+            else
+            {
+                grade = "Fail";
+            }
+
+            Console.WriteLine();
+            Console.WriteLine("Roll No: " + rollNo);
+            Console.WriteLine("Name: " + name);
+            Console.WriteLine("Marks in Subject 1: " + subj1Marks);
+            Console.WriteLine("Marks in Subject 2: " + subj2Marks);
+            Console.WriteLine("Marks in Subject 3: " + subj3Marks);
+            Console.WriteLine("Total Marks: " + totalMarks);
+            Console.WriteLine("Percentage: " + percentage.ToString("F2") + "%");
+            Console.WriteLine("Grade: " + grade);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Console.Write("Enter a number: ");
+            int number = int.Parse(Console.ReadLine());
+
+            if (number > 0)
+            {
+                Console.WriteLine($"{number} is positive.");
+            }
+            else if (number < 0)
+            {
+                Console.WriteLine($"{number} is negative.");
+            }
+            else
+            {
+                Console.WriteLine("The number is zero.");
+            }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+using System;
+
+namespace MonthName
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.Write("Enter the month number (1-12): ");
+            int monthNumber = Convert.ToInt32(Console.ReadLine());
+
+            string monthName = GetMonthName(monthNumber);
+
+            if (monthName != null)
+            {
+                Console.WriteLine("The month name is: " + monthName);
+            }
+            else
+            {
+                Console.WriteLine("Invalid month number.");
+            }
+
+            Console.ReadLine();
+        }
+
+        static string GetMonthName(int monthNumber)
+        {
+            string monthName = null;
+
+            switch (monthNumber)
+            {
+                case 1:
+                    monthName = "January";
+                    break;
+                case 2:
+                    monthName = "February";
+                    break;
+                case 3:
+                    monthName = "March";
+                    break;
+                case 4:
+                    monthName = "April";
+                    break;
+                case 5:
+                    monthName = "May";
+                    break;
+                case 6:
+                    monthName = "June";
+                    break;
+                case 7:
+                    monthName = "July";
+                    break;
+                case 8:
+                    monthName = "August";
+                    break;
+                case 9:
+                    monthName = "September";
+                    break;
+                case 10:
+                    monthName = "October";
+                    break;
+                case 11:
+                    monthName = "November";
+                    break;
+                case 12:
+                    monthName = "December";
+                    break;
+            }
+
+            return monthName;
+        }
+    }
+}
+In this program, we use a switch statement to map the month number entered by the user to the corresponding month name. The GetMonthName() method takes an integer month number as input and returns the month name as a string. The program prompts the user to enter a month number, calls the GetMonthName() method to get the corresponding month name, and then displays it using Console.WriteLine(). If an invalid month number is entered, the program displays an error message.
+
+
+
+
+syed hamza ali
+Write a program in C# Sharp to read any Month Number in integer and
+display the number of days for this month.
+Sure! Here's a simple program in C# that reads a month number as an integer and displays the number of days in that month:
+
+csharp
+Copy code
+using System;
+
+namespace MonthDays
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.Write("Enter the month number (1-12): ");
+            int monthNumber = Convert.ToInt32(Console.ReadLine());
+
+            int numDays = GetMonthDays(monthNumber);
+
+            if (numDays != -1)
+            {
+                Console.WriteLine("The number of days in the month is: " + numDays);
+            }
+            else
+            {
+                Console.WriteLine("Invalid month number.");
+            }
+
+            Console.ReadLine();
+        }
+
+        static int GetMonthDays(int monthNumber)
+        {
+            int numDays = -1;
+
+            switch (monthNumber)
+            {
+                case 1: // January
+                case 3: // March
+                case 5: // May
+                case 7: // July
+                case 8: // August
+                case 10: // October
+                case 12: // December
+                    numDays = 31;
+                    break;
+                case 4: // April
+                case 6: // June
+                case 9: // September
+                case 11: // November
+                    numDays = 30;
+                    break;
+                case 2: // February
+                    numDays = 28;
+                    break;
+            }
+
+            return numDays;
+        }
+    }
+}
